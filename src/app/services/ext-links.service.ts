@@ -80,10 +80,36 @@ export class ExtLinksService {
         ]        
       },
       {
+        name: 'MN Dept of Health COVID-19 Situation Update',
+        title: 'Daily numbers for tests, positive cases, hospitalizations, deaths and more',
+        page: 'article',
+        order: 2,
+        url: 'https://www.health.state.mn.us/diseases/coronavirus/situation.html',
+        description: [
+          {
+            comment: 'Numbers get adjusted sometimes'
+          }, {
+            comment: 'Do not freak out over a one day reporting number'
+          }
+        ]        
+      },
+      {
+        name: 'IMHE - Minnesota Projection',
+        title: 'IMHE at University of Washington',
+        page: 'article',
+        order: 3,
+        url: 'https://covid19.healthdata.org/united-states-of-america/minnesota',
+        description: [
+          {
+            comment: 'IMHE Minnesota Reported and Projection numbers'
+          }
+        ]        
+      },
+      {
         name: 'AEI COVID-19 Action Trackers',
         title: 'Twitter - @COVID2019action',
         page: 'article',
-        order: 2,
+        order: 4,
         url: 'https://www.aei.org/covid-2019-action-tracker/',
         description: [
           {
@@ -95,24 +121,10 @@ export class ExtLinksService {
         ]        
       },
       {
-        name: 'MN Dept of Health COVID-19 Situation Update',
-        title: 'Daily numbers for tests, positive cases, hospitalizations, deaths and more',
-        page: 'article',
-        order: 3,
-        url: 'https://www.health.state.mn.us/diseases/coronavirus/situation.html',
-        description: [
-          {
-            comment: 'Numbers get adjusted sometimes'
-          }, {
-            comment: 'Do not freak out over a one day reporting number'
-          }
-        ]        
-      },
-      {
         name: 'Federal Reserve Bank of Minneapolis',
         title: 'Ninth District',
         page: 'article',
-        order: 4,
+        order: 5,
         url: 'https://www.minneapolisfed.org/region-and-community/regional-economic-indicators/covid-19-and-the-ninth-district-economy-a-dashboard',
         description: [
           {
@@ -121,14 +133,17 @@ export class ExtLinksService {
         ]        
       },
       {
-        name: 'IMHE - Minnesota Projection',
-        title: 'IMHE at University of Washington',
+        name: 'Mayo Clinic ',
+        title: 'COVID-19 Dashboard',
         page: 'article',
-        order: 5,
-        url: 'https://covid19.healthdata.org/united-states-of-america/minnesota',
+        order: 6,
+        url: 'https://www.mayoclinic.org/coronavirus-covid-19',
         description: [
           {
-            comment: 'IMHE Minnesota Reported and Projection numbers'
+            comment: 'COVID-19 cases by county in U.S.'
+          },
+          {
+            comment: 'Future - will add predictive models'
           }
         ]        
       },
@@ -136,7 +151,7 @@ export class ExtLinksService {
         name: 'Individual Choice',
         title: 'no wrong is done to one who consents',
         page: 'article',
-        order: 6,
+        order: 7,
         url: 'https://thehill.com/opinion/civil-rights/496339-individual-choice-will-be-the-key-to-economic-recovery-after-the-crisis#.XsZjlFwQ_sM.twitter',
         description: [
           {
