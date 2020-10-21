@@ -148,10 +148,40 @@ export class ExtLinksService {
         ]        
       },
       {
+        name: 'Minnesota COVID-19 Response',
+        title: 'Minnesota COVID-19 Response Capacity',
+        page: 'article',
+        order: 7,
+        url: 'https://mn.gov/covid19/data/response-prep/response-capacity.jsp',
+        description: [
+          {
+            comment: 'Minnesota hospital capacity'
+          },
+          {
+            comment: 'Minnesota COVID Funding'
+          }
+        ]        
+      },
+      {
+        name: 'NCSL - National Conference of State Legislatures',
+        title: 'State Oversight of Federal Stimulus Funds',
+        page: 'article',
+        order: 8,
+        url: 'https://www.ncsl.org/ncsl-in-dc/publications-and-resources/state-oversight-of-federal-stimulus-funds.aspx',
+        description: [
+          {
+            comment: 'Links to each State COVID sites'
+          },
+          {
+            comment: 'Stimulus Oversight Plans'
+          }
+        ]        
+      },
+      {
         name: 'Individual Choice',
         title: 'no wrong is done to one who consents',
         page: 'article',
-        order: 7,
+        order: 9,
         url: 'https://thehill.com/opinion/civil-rights/496339-individual-choice-will-be-the-key-to-economic-recovery-after-the-crisis#.XsZjlFwQ_sM.twitter',
         description: [
           {
