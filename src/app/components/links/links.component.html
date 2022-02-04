@@ -1,0 +1,60 @@
+<div id="links" class="container-fluid">
+  <div class="pt-3 pl-3">NOTE: Click on individual HTML card to follow link</div>
+
+  <!-- COVID-19 Models -->
+  <div class="display-5 pt-5 pl-3"><strong>COVID-19 Data Models</strong></div>
+  <hr>
+  <div class="row">
+    <div *ngFor="let h of extLinkModelList" class="col-xs-12 col-md-6 col-lg-4 col-xl-3">
+      <div class="card" (click)="goUrl(h.url)">
+          <div class="card-header">
+              <div>{{ h.name }}</div>
+              <div *ngIf="h.title">
+                <div  class="title">
+                  {{ h.title }}
+                </div>
+              </div>
+          </div>
+          <div class="card-body">
+            <ul>
+              <div class="linkdesc">Description:</div>
+              <li *ngFor="let c of h.description">
+                <div class="linkcomment">
+                  {{ c.comment }}
+                </div>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- COVID-19 News Articles -->
+  <div class="display-5 pt-5 pl-3"><strong>COVID-19 Sites or News Articles</strong></div>
+  <hr>
+  <div class="row">
+    <div *ngFor="let h of extLinkArticleList" class="col-xs-12 col-md-6 col-lg-4 col-xl-3">
+      <div class="card" (click)="goUrl(h.url)">
+          <div class="card-header">
+              <div>{{ h.name }}</div>
+              <div *ngIf="h.title">
+                <div  class="title">
+                  {{ h.title }}
+                </div>
+              </div>
+          </div>
+          <div class="card-body">
+            <ul>
+              <div class="linkdesc">Description:</div>
+              <li *ngFor="let c of h.description">
+                <div class="linkcomment">
+                  {{ c.comment }}
+                </div>
+              </li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+
+</div>

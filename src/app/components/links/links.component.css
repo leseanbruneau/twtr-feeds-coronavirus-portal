@@ -1,0 +1,47 @@
+#links {
+  padding-top: 75px;
+}
+
+.card {
+  border: 2px solid black;
+  margin-bottom: 2rem;
+}
+
+div.card:hover { 
+  cursor:pointer
+}
+
+.card-header {
+  background-color: lightseagreen;
+  color: black;
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.title {
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+
+div ul {
+  list-style: none;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  padding-left: 0rem;
+  padding-right: 0rem;
+}
+
+.linkdesc {
+  margin-top: 0.3rem;
+  font-weight: bold;
+}
+
+.linkcomment {
+  padding-left:0.5rem;
+  font-size: 0.8rem;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+}

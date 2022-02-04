@@ -1,0 +1,30 @@
+<div id="company" class="container-fluid">
+  <div class="display-3">Company</div>
+  <hr>
+  <div class="row">
+    <div *ngFor="let h of companyTwitterList" class="col-xs-12 col-md-12 col-lg-6 col-xl-4">
+      <div class="card">
+          <div class="card-header" (click)="goHomeUrl(h.homeUrl)">
+              <div>{{ h.name }}</div>
+              <div *ngIf="h.title">
+                <div  class="title">
+                  {{ h.title }}
+                </div>
+              </div>
+          </div>
+          <div class="card-body">
+              <a
+              class="twitter-timeline"
+              data-width="800"
+              data-height="1500"
+              data-theme="dark"
+              href="{{ h.url }}"
+            >
+              Tweets by {{ h.name }}</a
+            >      
+          </div>
+      </div>
+    </div>
+  </div>
+</div>
+

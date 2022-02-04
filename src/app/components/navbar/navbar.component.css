@@ -1,0 +1,11 @@
+.navbar {
+  opacity: 0.8;
+  border-bottom: #800000 5px solid; 
+  background-color: #ffd700;
+}
+
+.ntitle {
+  font-size: 1.2rem;
+  color: #800000;
+  font-weight: bold;
+}
