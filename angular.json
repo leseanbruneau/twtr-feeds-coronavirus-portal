@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "twtr-feeds-coronavirus-portal:build:production"
+              "buildTarget": "twtr-feeds-coronavirus-portal:build:production"
             },
             "development": {
-              "browserTarget": "twtr-feeds-coronavirus-portal:build:development"
+              "buildTarget": "twtr-feeds-coronavirus-portal:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "twtr-feeds-coronavirus-portal:build"
+            "buildTarget": "twtr-feeds-coronavirus-portal:build"
           }
         },
         "test": {
