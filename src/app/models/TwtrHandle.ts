@@ -5,5 +5,6 @@ export interface TwitterHandle {
   night?: number,
   order: number,
   url: string,
-  homeUrl?: string
+  homeUrl?: string,
+  showTimeline?: boolean
 }

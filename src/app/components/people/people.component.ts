@@ -12,19 +12,30 @@ export class PeopleComponent implements OnInit {
   mediaTwitterList: TwitterHandle[];
 
   constructor(private scientistsListService: TwtrFeedsService, 
-    private mediaListService: TwtrFeedsService) { }
+    private mediaListService: TwtrFeedsService) {
+      this.scientistTwitterList = this.scientistsListService.getScientistFeeds();
+      this.mediaTwitterList = this.mediaListService.getMediaFeeds();
+    }
 
 
     ngOnInit(): void {
-      this.scientistTwitterList = this.scientistsListService.getScientistFeeds();
-      this.mediaTwitterList = this.mediaListService.getMediaFeeds();
       setTimeout(function() {
         (<any>window).twttr.widgets.load();
-      }, 3000);
+      }, 500);
     }
   
     goHomeUrl(homeUrl: string) {
       window.open(homeUrl, '_blank');
+    }
+
+    showXTimeline(t: TwitterHandle) {
+      console.log("showXTimeline clicked....")
+      console.log("value of t: " + t.showTimeline)
+      t.showTimeline = !t.showTimeline;
+      //window.location.reload()
+      setTimeout(function() {
+        (<any>window).twttr.widgets.load();
+      }, 500);
     }
 
 }

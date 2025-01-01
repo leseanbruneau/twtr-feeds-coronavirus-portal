@@ -17,7 +17,8 @@ export class TwtrFeedsService {
         page: 'scientist',
         order: 1,
         url: 'https://twitter.com/ScottGottliebMD',
-        homeUrl: 'https://www.aei.org/profile/scott-gottlieb/'
+        homeUrl: 'https://www.aei.org/profile/scott-gottlieb/',
+        showTimeline: true
       },
       {
         name: 'Dr. Tom Frieden',
@@ -25,12 +26,14 @@ export class TwtrFeedsService {
         page: 'scientist',
         order: 2,
         url: 'https://twitter.com/DrTomFrieden',
-        homeUrl: 'https://www.drtomfrieden.net/'
+        homeUrl: 'https://www.drtomfrieden.net/',
+        showTimeline: false
       },
       {
         name: 'Dr. Michael Osterholm',
         title: 'Director of Center for Infectious Disease Research at University of Minnesota',
-        page: 'scientist',
+        page: 'org',
+        //page: 'scientist',
         order: 3,
         url: 'https://twitter.com/mtosterholm',
         homeUrl: 'https://cidrap.umn.edu'
