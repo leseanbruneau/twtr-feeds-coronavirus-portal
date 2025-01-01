@@ -3,9 +3,10 @@ import { TwtrFeedsService } from 'src/app/services/twtr-feeds.service';
 import { TwitterHandle } from 'src/app/models/TwtrHandle';
 
 @Component({
-  selector: 'app-media',
-  templateUrl: './media.component.html',
-  styleUrls: ['./media.component.css']
+    selector: 'app-media',
+    templateUrl: './media.component.html',
+    styleUrls: ['./media.component.css'],
+    standalone: false
 })
 export class MediaComponent implements OnInit {
   mediaTwitterList: TwitterHandle[];

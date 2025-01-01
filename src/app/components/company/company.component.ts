@@ -3,9 +3,10 @@ import { TwtrFeedsService } from 'src/app/services/twtr-feeds.service';
 import { TwitterHandle } from 'src/app/models/TwtrHandle';
 
 @Component({
-  selector: 'app-company',
-  templateUrl: './company.component.html',
-  styleUrls: ['./company.component.css']
+    selector: 'app-company',
+    templateUrl: './company.component.html',
+    styleUrls: ['./company.component.css'],
+    standalone: false
 })
 export class CompanyComponent implements OnInit {
   companyTwitterList: TwitterHandle[];

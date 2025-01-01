@@ -3,9 +3,10 @@ import { TwtrFeedsService } from 'src/app/services/twtr-feeds.service';
 import { TwitterHandle } from 'src/app/models/TwtrHandle';
 
 @Component({
-  selector: 'app-org',
-  templateUrl: './org.component.html',
-  styleUrls: ['./org.component.css']
+    selector: 'app-org',
+    templateUrl: './org.component.html',
+    styleUrls: ['./org.component.css'],
+    standalone: false
 })
 export class OrgComponent implements OnInit {
   orgTwitterList: TwitterHandle[];

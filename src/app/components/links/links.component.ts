@@ -4,9 +4,10 @@ import { ExtLinksService } from 'src/app/services/ext-links.service';
 
 
 @Component({
-  selector: 'app-links',
-  templateUrl: './links.component.html',
-  styleUrls: ['./links.component.css']
+    selector: 'app-links',
+    templateUrl: './links.component.html',
+    styleUrls: ['./links.component.css'],
+    standalone: false
 })
 export class LinksComponent implements OnInit {
   extLinkModelList: LinkModel[];

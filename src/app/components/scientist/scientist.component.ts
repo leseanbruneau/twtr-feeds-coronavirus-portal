@@ -3,9 +3,10 @@ import { TwtrFeedsService } from 'src/app/services/twtr-feeds.service';
 import { TwitterHandle } from 'src/app/models/TwtrHandle';
 
 @Component({
-  selector: 'app-scientist',
-  templateUrl: './scientist.component.html',
-  styleUrls: ['./scientist.component.css']
+    selector: 'app-scientist',
+    templateUrl: './scientist.component.html',
+    styleUrls: ['./scientist.component.css'],
+    standalone: false
 })
 export class ScientistComponent implements OnInit {
   scientistTwitterList: TwitterHandle[];

@@ -3,9 +3,10 @@ import { TwtrFeedsService } from 'src/app/services/twtr-feeds.service';
 import { TwitterHandle } from 'src/app/models/TwtrHandle';
 
 @Component({
-  selector: 'app-state',
-  templateUrl: './state.component.html',
-  styleUrls: ['./state.component.css']
+    selector: 'app-state',
+    templateUrl: './state.component.html',
+    styleUrls: ['./state.component.css'],
+    standalone: false
 })
 export class StateComponent implements OnInit {
   stateTwitterList: TwitterHandle[];
