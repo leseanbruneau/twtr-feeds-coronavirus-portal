@@ -1,73 +1,78 @@
 <div id="people" class="container-fluid">
   <div class="display-3">Scientists</div>
   <hr>
-  <div class="row">
-    <div *ngFor="let h of scientistTwitterList" class="col-xs-12 col-md-12 col-lg-6 col-xl-4">
-      <div class="card">
-        <div class="card-header" (click)="goHomeUrl(h.homeUrl)">
-            <div>{{ h.name }}</div>
-            <div *ngIf="h.title">
-              <div  class="title">
-                {{ h.title }}
+    <div class="row">
+      @for (h of scientistTwitterList; track h) {
+        <div class="col-xs-12 col-md-12 col-lg-6 col-xl-4">
+          <div class="card">
+            <div class="card-header" (click)="goHomeUrl(h.homeUrl)">
+              <div>{{ h.name }}</div>
+              @if (h.title) {
+                <div>
+                  <div  class="title">
+                    {{ h.title }}
+                  </div>
+                </div>
+              }
+            </div>
+            <div class="card-body">
+              @if (h.showTimeline) {
+                <div>
+                  <button (click)="showXTimeline(h)">Hide X Timeline</button>
+                </div>
+              } @else {
+                <button (click)="showXTimeline(h)">Show X Timeline</button>
+              }
+              @if (h.showTimeline) {
+                <div>
+                  <a
+                    class="twitter-timeline"
+                    data-width="800"
+                    data-height="1500"
+                    data-theme="dark"
+                    href="{{ h.url }}"
+                    >
+                    Tweets by {{ h.name }}</a
+                    >
+                    <!--
+                    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    -->
+                  </div>
+                } @else {
+                  Timeline not shown here...
+                }
               </div>
             </div>
-        </div>
-        <div class="card-body">
-          <div *ngIf="h.showTimeline; else elseBtnBlock">
-            <button (click)="showXTimeline(h)">Hide X Timeline</button>
           </div>
-          <ng-template #elseBtnBlock>
-            <button (click)="showXTimeline(h)">Show X Timeline</button>
-          </ng-template>
-
-          <div *ngIf="h.showTimeline; else elseBlock">
-            <a
-              class="twitter-timeline"
-              data-width="800"
-              data-height="1500"
-              data-theme="dark"
-              href="{{ h.url }}"
-            >
-              Tweets by {{ h.name }}</a
-            >
-            <!--
-            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-            -->
-          </div>
-          <ng-template #elseBlock>
-            Timeline not shown here...
-          </ng-template>
-        </div>
+        }
       </div>
-    </div>
-  </div>
-  <!--
-  <div class="display-3">Media</div>
-  <hr>
-  <div class="row">
-    <div *ngFor="let h of mediaTwitterList" class="col-xs-12 col-md-12 col-lg-6 col-xl-4">
-      <div class="card">
-          <div class="card-header" (click)="goHomeUrl(h.homeUrl)">
-              <div>{{ h.name }}</div>
-              <div *ngIf="h.title">
-                <div  class="title">
-                  {{ h.title }}
+      <!--
+      <div class="display-3">Media</div>
+      <hr>
+        <div class="row">
+          <div *ngFor="let h of mediaTwitterList" class="col-xs-12 col-md-12 col-lg-6 col-xl-4">
+            <div class="card">
+              <div class="card-header" (click)="goHomeUrl(h.homeUrl)">
+                <div>{{ h.name }}</div>
+                <div *ngIf="h.title">
+                  <div  class="title">
+                    {{ h.title }}
+                  </div>
                 </div>
               </div>
+              <div class="card-body">
+                <a
+                  class="twitter-timeline"
+                  data-width="800"
+                  data-height="1500"
+                  data-theme="dark"
+                  href="{{ h.url }}"
+                  >
+                  Tweets by {{ h.name }}</a
+                  >
+                </div>
+              </div>
+            </div>
           </div>
-          <div class="card-body">
-              <a
-              class="twitter-timeline"
-              data-width="800"
-              data-height="1500"
-              data-theme="dark"
-              href="{{ h.url }}"
-            >
-              Tweets by {{ h.name }}</a
-            >      
-          </div>
-      </div>
-    </div>
-  </div>
-  -->
-</div>
+          -->
+        </div>
