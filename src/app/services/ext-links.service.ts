@@ -5,9 +5,9 @@ import { LinkModel } from 'src/app/models/LinkModel';
   providedIn: 'root'
 })
 export class ExtLinksService {
-  allExtLinks: LinkModel[];
-  filteredExtLinks: LinkModel[];
-  rankedExtLinks: LinkModel[];
+  allExtLinks: LinkModel[] = [];
+  filteredExtLinks: LinkModel[] = [];
+  rankedExtLinks: LinkModel[] = [];
 
   constructor() {
     this.allExtLinks = [
@@ -245,9 +245,10 @@ export class ExtLinksService {
      return this.rankedExtLinks;
    }  
    
-   sortByKey(array, key) {
-    return array.sort(function(a, b) {
-        var x = a[key]; var y = b[key];
+   sortByKey<T>(array: T[], key: keyof T): T[] {
+    return array.sort((a, b) => {
+        const x = a[key] as string | number;
+        const y = b[key] as string | number;
         return ((x < y) ? -1 : ((x > y) ? 1 : 0));
     });
   }

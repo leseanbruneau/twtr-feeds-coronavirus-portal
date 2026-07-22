@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { TwtrFeedsService } from 'src/app/services/twtr-feeds.service';
 import { TwitterHandle } from 'src/app/models/TwtrHandle';
 
@@ -6,10 +6,11 @@ import { TwitterHandle } from 'src/app/models/TwtrHandle';
     selector: 'app-org',
     templateUrl: './org.component.html',
     styleUrls: ['./org.component.css'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class OrgComponent implements OnInit {
-  orgTwitterList: TwitterHandle[];
+  orgTwitterList: TwitterHandle[] = [];
 
   constructor(private orgListService: TwtrFeedsService) {
 

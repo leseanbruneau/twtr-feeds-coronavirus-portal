@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { TwtrFeedsService } from 'src/app/services/twtr-feeds.service';
 import { TwitterHandle } from 'src/app/models/TwtrHandle';
 
@@ -6,11 +6,12 @@ import { TwitterHandle } from 'src/app/models/TwtrHandle';
     selector: 'app-people',
     templateUrl: './people.component.html',
     styleUrls: ['./people.component.css'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class PeopleComponent implements OnInit {
-  scientistTwitterList: TwitterHandle[];
-  mediaTwitterList: TwitterHandle[];
+  scientistTwitterList: TwitterHandle[] = [];
+  mediaTwitterList: TwitterHandle[] = [];
 
   constructor(private scientistsListService: TwtrFeedsService, 
     private mediaListService: TwtrFeedsService) {

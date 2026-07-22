@@ -5,9 +5,9 @@ import { TwitterHandle } from 'src/app/models/TwtrHandle';
   providedIn: 'root'
 })
 export class TwtrFeedsService {
-  allTwitterFeeds: TwitterHandle[];
-  filteredTwitterFeeds: TwitterHandle[];
-  rankedTwitterFeeds: TwitterHandle[];
+  allTwitterFeeds: TwitterHandle[] = [];
+  filteredTwitterFeeds: TwitterHandle[] = [];
+  rankedTwitterFeeds: TwitterHandle[] = [];
 
   constructor() {
     this.allTwitterFeeds = [
@@ -266,9 +266,10 @@ export class TwtrFeedsService {
      return this.rankedTwitterFeeds;
    }
 
-   sortByKey(array, key) {
-    return array.sort(function(a, b) {
-        var x = a[key]; var y = b[key];
+   sortByKey<T>(array: T[], key: keyof T): T[] {
+    return array.sort((a, b) => {
+        const x = a[key] as string | number;
+        const y = b[key] as string | number;
         return ((x < y) ? -1 : ((x > y) ? 1 : 0));
     });
   }

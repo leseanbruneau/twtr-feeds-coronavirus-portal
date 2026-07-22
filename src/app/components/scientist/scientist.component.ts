@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { TwtrFeedsService } from 'src/app/services/twtr-feeds.service';
 import { TwitterHandle } from 'src/app/models/TwtrHandle';
 
@@ -6,10 +6,11 @@ import { TwitterHandle } from 'src/app/models/TwtrHandle';
     selector: 'app-scientist',
     templateUrl: './scientist.component.html',
     styleUrls: ['./scientist.component.css'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class ScientistComponent implements OnInit {
-  scientistTwitterList: TwitterHandle[];
+  scientistTwitterList: TwitterHandle[] = [];
 
   constructor(private scientistsListService: TwtrFeedsService) {
    }

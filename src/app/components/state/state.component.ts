@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { TwtrFeedsService } from 'src/app/services/twtr-feeds.service';
 import { TwitterHandle } from 'src/app/models/TwtrHandle';
 
@@ -6,11 +6,12 @@ import { TwitterHandle } from 'src/app/models/TwtrHandle';
     selector: 'app-state',
     templateUrl: './state.component.html',
     styleUrls: ['./state.component.css'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class StateComponent implements OnInit {
-  stateTwitterList: TwitterHandle[];
-  intlTwitterList: TwitterHandle[];
+  stateTwitterList: TwitterHandle[] = [];
+  intlTwitterList: TwitterHandle[] = [];
 
   constructor(private stateListService: TwtrFeedsService) {
 

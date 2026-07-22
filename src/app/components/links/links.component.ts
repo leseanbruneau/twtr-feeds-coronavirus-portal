@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { LinkModel } from 'src/app/models/LinkModel';
 import { ExtLinksService } from 'src/app/services/ext-links.service';
 
@@ -7,11 +7,12 @@ import { ExtLinksService } from 'src/app/services/ext-links.service';
     selector: 'app-links',
     templateUrl: './links.component.html',
     styleUrls: ['./links.component.css'],
+    changeDetection: ChangeDetectionStrategy.Eager,
     standalone: false
 })
 export class LinksComponent implements OnInit {
-  extLinkModelList: LinkModel[];
-  extLinkArticleList: LinkModel[];
+  extLinkModelList: LinkModel[] = [];
+  extLinkArticleList: LinkModel[] = [];
 
   constructor(private modelLinkListService: ExtLinksService, 
     private articleLinkListService: ExtLinksService) { }
